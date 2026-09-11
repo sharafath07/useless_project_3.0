@@ -6,13 +6,12 @@
 
 
 ## Basic Details
-### Team Name: [Name]
+### Team Name: Cockroach
 
 
 ### Team Members
-- Team Lead: [Name] - [College]
-- Member 2: [Name] - [College]
-- Member 3: [Name] - [College]
+- Team Lead: Sharafath Ahammed V - Farook College
+- Member 2: Nasih Ameen A - Farook College
 
 ### Project Description
 [2-3 lines about what your project does]
