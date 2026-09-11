@@ -1,1 +1,109 @@
+<!doctype html>
+<html lang="en">
 
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#10161d">
+    <title>Superstition GPS</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Space+Grotesk:wght@400;500;600;700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" crossorigin="">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <main class="app-shell">
+        <header class="topbar">
+            <div class="brand"><span class="brand-mark">🧿</span>
+                <div>
+                    <p class="eyebrow">NAVIGATION, SORT OF</p>
+                    <h1>Super <span>GPS</span></h1>
+                </div>
+            </div>
+            <div class="signal"><span class="signal-dot"></span><span id="connectionLabel">COSMIC SIGNAL ONLINE</span>
+            </div>
+        </header>
+
+        <section class="workspace">
+            <div class="map-wrap">
+                <div id="map" aria-label="Interactive navigation map"></div>
+                <div class="map-badge"><span class="live-dot"></span> LIVE DESTINY FEED</div>
+                <div class="map-attribution">OpenStreetMap · OSRM</div>
+            </div>
+
+            <aside class="control-panel">
+                <section class="route-card intro-card">
+                    <div class="card-kicker">01 / SET YOUR INTENTION</div>
+                    <h2>Where are you<br><em>really</em> going?</h2>
+                    <p class="muted">Enter a place, coordinates, or let the universe pick the vibes.</p>
+                    <form id="routeForm">
+                        <label for="destination">DESTINATION</label>
+                        <div class="input-row"><span>⌖</span><input id="destination" autocomplete="off"
+                                placeholder="Kozhikode, India or 11.25, 75.78"><button type="submit" class="icon-button"
+                                aria-label="Navigate">→</button></div>
+                    </form>
+                    <div class="travel-time-row">
+                        <div><label for="travelDate">TRAVEL DATE</label><input id="travelDate" type="date"></div>
+                        <div><label for="travelTime">TRAVEL TIME</label><input id="travelTime" type="time"></div>
+                    </div>
+                    <div class="quick-destinations"><button data-place="Fort Kochi, Kerala">Fort Kochi</button><button
+                            data-place="Kakkanad, Kerala">Kakkanad</button><button
+                            data-place="Edappally, Kerala">Edappally</button></div>
+                    <div class="action-row"><button id="navigateButton" class="primary-button">🧿
+                            Navigate</button><button id="demoButton" class="secondary-button">🎭 Start demo</button>
+                    </div>
+                </section>
+
+                <section class="route-card status-card" aria-live="polite">
+                    <div class="card-kicker">02 / COSMIC INTERFERENCE</div>
+                    <div id="statusContent" class="status-content idle">
+                        <div class="status-icon">✦</div>
+                        <div>
+                            <h3>Awaiting a destination</h3>
+                            <p>GPS calculation successful. Common sense calculation pending.</p>
+                        </div>
+                    </div>
+                    <div class="confidence-wrap">
+                        <div class="confidence-label"><span>Cosmic confidence</span><strong
+                                id="confidenceValue">--%</strong></div>
+                        <div class="progress"><span id="confidenceBar"></span></div>
+                    </div>
+                    <button id="recalculateButton" class="recalculate-button" disabled>🔮 Consult the universe
+                        again</button>
+                </section>
+
+                <section class="route-card metrics-card">
+                    <div class="card-kicker">03 / JOURNEY STATUS</div>
+                    <div class="metrics-grid">
+                        <div><span>Distance</span><strong id="distanceValue">--</strong></div>
+                        <div><span>Normal ETA</span><strong id="normalEta">--</strong></div>
+                        <div><span>Destiny ETA</span><strong id="destinyEta">--</strong></div>
+                        <div><span>Route mood</span><strong id="routeMood">Unknown</strong></div>
+                    </div>
+                </section>
+
+                <section class="route-card history-card">
+                    <div class="history-heading">
+                        <div class="card-kicker">OMEN HISTORY</div><span id="omenCount">0 omens</span>
+                    </div>
+                    <ul id="historyList">
+                        <li class="empty-history">No cosmic decisions yet.</li>
+                    </ul>
+                </section>
+            </aside>
+        </section>
+        <footer><span>NO LOGIC · NO LIABILITY</span><span id="locationLabel">Demo location · Kozhikode
+                coordinates</span>
+        </footer>
+    </main>
+    <div id="toast" class="toast" role="status"></div>
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
+        integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
+    <script src="script.js"></script>
+</body>
+
+</html>
