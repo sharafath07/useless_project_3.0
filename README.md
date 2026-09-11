@@ -55,7 +55,7 @@ For Hardware:
 No package installation or API key is required.
 
 ```bash
-git clone https://github.com/sharafathv/useless_project_3.0.git
+git clone https://github.com/sharafath07/useless_project_3.0.git
 cd useless_project_3.0
 ```
 
@@ -129,7 +129,7 @@ Suggested demo sequence:
 ### Additional Demos
 
 - Live app: run `index.html` or the local server command above.
-- Repository: https://github.com/sharafathv/useless_project_3.0
+- Repository: https://github.com/sharafath07/useless_project_3.0
 
 ## Team Contributions
 
